@@ -1,0 +1,885 @@
+1687097038501	geckodriver	INFO	Listening on 127.0.0.1:51508
+1687097041505	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileuy22YC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687097042014	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687097042022	Marionette	INFO	Listening on port 51518
+Read port: 51518
+1687097042287	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687097178735	Marionette	INFO	Stopped listening on port 51518
+Dynamically enable window occlusion 1
+1687104057997	geckodriver	INFO	Listening on 127.0.0.1:51883
+1687104061025	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileDSMPyu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687104061550	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687104061561	Marionette	INFO	Listening on port 51893
+Read port: 51893
+1687104061841	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687104084648	Marionette	INFO	Stopped listening on port 51893
+Dynamically enable window occlusion 1
+1687104086597	geckodriver	INFO	Listening on 127.0.0.1:51997
+1687104089642	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileXKAxC3"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687104090128	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687104090136	Marionette	INFO	Listening on port 52009
+Read port: 52009
+1687104090388	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687104120567	Marionette	INFO	Stopped listening on port 52009
+Dynamically enable window occlusion 1
+console.error: "DEPRECATION WARNING: Calling FileUtils.getDir(..., ..., true) causes main thread I/O and should be avoided especially during startup/shutdown\nYou may find more details about this deprecation at: https://bugzilla.mozilla.org/show_bug.cgi?id=921157\nresource://gre/modules/FileUtils.sys.mjs 62 FileUtils_getDir\nresource://gre/modules/UpdateService.sys.mjs 1056 getUpdateDirCreate\nresource://gre/modules/UpdateService.sys.mjs 1095 getUpdateFile\nresource://gre/modules/UpdateService.sys.mjs 4449 UM__loadXMLFileIntoArray\nresource://gre/modules/UpdateService.sys.mjs 4282 UpdateManager\nresource://gre/modules/XPCOMUtils.sys.mjs 137 defineLazyServiceGetter/<\nresource://gre/modules/UpdateService.sys.mjs 3381 get _pingSuffix\nresource://gre/modules/UpdateService.sys.mjs 3424 AUS__checkForBackgroundUpdates\nresource://gre/modules/UpdateService.sys.mjs 3369 AUS_notify\nresource://gre/modules/UpdateTimerManager.sys.mjs 205 TM_notify/</<\n"
+console.error: "DEPRECATION WARNING: Calling FileUtils.getDir(..., ..., true) causes main thread I/O and should be avoided especially during startup/shutdown\nYou may find more details about this deprecation at: https://bugzilla.mozilla.org/show_bug.cgi?id=921157\nresource://gre/modules/FileUtils.sys.mjs 62 FileUtils_getDir\nresource://gre/modules/UpdateService.sys.mjs 1056 getUpdateDirCreate\nresource://gre/modules/UpdateService.sys.mjs 1095 getUpdateFile\nresource://gre/modules/UpdateService.sys.mjs 774 getCanApplyUpdates\nresource://gre/modules/UpdateService.sys.mjs 3432 AUS__checkForBackgroundUpdates\nresource://gre/modules/UpdateService.sys.mjs 3369 AUS_notify\nresource://gre/modules/UpdateTimerManager.sys.mjs 205 TM_notify/</<\n"
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.sys.mjs", 324))
+1687104120630	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2147500036, errorCode: 2, reason: error
+1687104173562	geckodriver	INFO	Listening on 127.0.0.1:52110
+1687104176630	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilecRoRHr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687104177230	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687104177240	Marionette	INFO	Listening on port 52123
+Read port: 52123
+1687104177496	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687104184804	Marionette	INFO	Stopped listening on port 52123
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1687105732677	geckodriver	INFO	Listening on 127.0.0.1:52357
+1687105735713	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileEfYvwh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687105736198	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687105736207	Marionette	INFO	Listening on port 52368
+Read port: 52368
+1687105736458	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687105947332	Marionette	INFO	Stopped listening on port 52368
+Dynamically enable window occlusion 1
+le.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687105888791	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687105888799	Marionette	INFO	Listening on port 52512
+Read port: 52512
+1687105889042	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Error while calling actor 'pagestyle's method 'getApplied'" "node is null"
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 523))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 932))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal6442450945/pagestyle21 (resource://devtools/server/actors/page-style.js:932:5)", "resource://devtools/shared/protocol/Front.js", 383))
+console.error: "Error while calling actor 'pagestyle's method 'getUsedFontFaces'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 322))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: "Could not get the list of font families" (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal6442450945/pagestyle21 (resource://devtools/server/actors/page-style.js:322:24)", "resource://devtools/shared/protocol/Front.js", 383))
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687105965282	Marionette	INFO	Stopped listening on port 52512
+Dynamically enable window occlusion 1
+le.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687105948509	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687105948517	Marionette	INFO	Listening on port 52629
+Read port: 52629
+1687105948752	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 932))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal6442450945/pagestyle21 (resource://devtools/server/actors/page-style.js:932:5)", "resource://devtools/shared/protocol/Front.js", 383))
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687107521173	Marionette	INFO	Stopped listening on port 52629
+Dynamically enable window occlusion 1
+le.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687106294540	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687106294549	Marionette	INFO	Listening on port 52832
+Read port: 52832
+1687106294825	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("nodeFront.walkerFront is null", "resource://devtools/client/inspector/markup/markup.js", 1012))
+TypeError: nodeFront.walkerFront is null: _onNewSelection@resource://devtools/client/inspector/markup/markup.js:1012:7
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+setNodeFront@resource://devtools/client/framework/selection.js:203:10
+onDetached@resource://devtools/client/inspector/inspector.js:1671:20
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+_onMutations@resource://devtools/client/framework/selection.js:104:12
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new Error("Can not send request 'getUniqueSelector' because front 'domnode' is already destroyed.", "resource://devtools/shared/protocol/Front/FrontClassWithSpec.js", 28))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:309:10
+
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687107522164	Marionette	INFO	Stopped listening on port 52832
+Dynamically enable window occlusion 1
+le.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687107011176	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687107011184	Marionette	INFO	Listening on port 53078
+Read port: 53078
+1687107011431	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687107029933	Marionette	INFO	Stopped listening on port 53078
+Dynamically enable window occlusion 1
+1687107044403	geckodriver	INFO	Listening on 127.0.0.1:53192
+1687107047428	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile5065oQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687107047918	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687107047927	Marionette	INFO	Listening on port 53204
+Read port: 53204
+1687107048168	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687107522483	Marionette	INFO	Stopped listening on port 53204
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileoTNKmP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687107083816	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687107083827	Marionette	INFO	Listening on port 53332
+Read port: 53332
+1687107084117	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687107524158	Marionette	INFO	Stopped listening on port 53332
+Dynamically enable window occlusion 1
+[Parent 20048, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:787
+87107271739	Marionette	INFO	Listening on port 53480
+Read port: 53480
+1687107271984	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687107524446	Marionette	INFO	Stopped listening on port 53480
+Dynamically enable window occlusion 1
+[Parent 2368, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:787
+ettings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687107299664	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687107299671	Marionette	INFO	Listening on port 53587
+Read port: 53587
+1687107299918	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687107317380	Marionette	INFO	Stopped listening on port 53587
+Dynamically enable window occlusion 1
+1687107354055	geckodriver	INFO	Listening on 127.0.0.1:53699
+1687107357088	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileB8Ym2K"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687107357722	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687107357734	Marionette	INFO	Listening on port 53712
+Read port: 53712
+1687107358034	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687107525238	Marionette	INFO	Stopped listening on port 53712
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile5BoSTj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687107434751	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687107434767	Marionette	INFO	Listening on port 53837
+Read port: 53837
+1687107435126	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687107527001	Marionette	INFO	Stopped listening on port 53837
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileA4b1s0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687107481206	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687107481219	Marionette	INFO	Listening on port 53978
+Read port: 53978
+1687107481603	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Parent 24012, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:787
+1687107527992	Marionette	INFO	Stopped listening on port 53978
+Dynamically enable window occlusion 1
+1687107907916	geckodriver	INFO	Listening on 127.0.0.1:54209
+1687107910960	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilei8ZWic"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687107911232	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687107911237	Marionette	INFO	Listening on port 54221
+Read port: 54221
+1687107911374	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://app.usercentrics.eu/browser-ui/3.22.0/index.module.js, line 1: Error: Error: Error: {"cmpLayer":"FIRST_LAYER","controllerId":"88980c45983ea6d1ecb7bda3e765b9ebf48143c3b5f4b4e27fc86e1f4edf3737","msg":"EUD ERROR[V2]: error loading dynamically imported module","origin":"https://messari.io","settingsId":"tMrziqZnk","settingsVersion":"4.0.20","stackTrace":"","timestamp":"1687107919056","uiVariant":"GDPR","uiVersion":"3.22.0","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0","userCountry":"IN","userRegion":"KA"}
+1687107983067	Marionette	INFO	Stopped listening on port 54221
+Dynamically enable window occlusion 1
+1687360288272	geckodriver	INFO	Listening on 127.0.0.1:49783
+1687360291313	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile8VKAlq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687360291896	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687360291905	Marionette	INFO	Listening on port 49797
+Read port: 49797
+1687360292155	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687360337192	Marionette	INFO	Stopped listening on port 49797
+Dynamically enable window occlusion 1
+1687360636598	geckodriver	INFO	Listening on 127.0.0.1:50084
+1687360639638	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilepe1fG3"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687360640116	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687360640124	Marionette	INFO	Listening on port 50094
+Read port: 50094
+1687360640354	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687360686584	Marionette	INFO	Stopped listening on port 50094
+Dynamically enable window occlusion 1
+1687360774296	geckodriver	INFO	Listening on 127.0.0.1:50210
+1687360777338	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilepN0sAB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687360777835	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687360777844	Marionette	INFO	Listening on port 50220
+Read port: 50220
+1687360778083	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687360809485	Marionette	INFO	Stopped listening on port 50220
+Dynamically enable window occlusion 1
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 Signature failed  TypeError: NetworkError: Network request failed
+console.error: services.settings: 
+  Message: NetworkError: Network error: TypeError: NetworkError: Network request failed
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.sys.mjs:111:1
+Netwo1687360809681	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687360809691	Marionette	INFO	Listening on port 50333
+Read port: 50333
+1687360809942	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687360883036	Marionette	INFO	Stopped listening on port 50333
+Dynamically enable window occlusion 1
+errupted by shutdown
+console.error: (new AbortError("IndexedDB: main/language-dictionaries getLastModified() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.jsm", 18))
+1687360967919	geckodriver	INFO	Listening on 127.0.0.1:50448
+1687360970944	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileX6wiFu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687360971447	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687360971456	Marionette	INFO	Listening on port 50459
+Read port: 50459
+1687360971687	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687360991593	Marionette	INFO	Stopped listening on port 50459
+Dynamically enable window occlusion 1
+[Parent 2192, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:787
+1687361056144	geckodriver	INFO	Listening on 127.0.0.1:50575
+1687361059186	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileJs7Kky"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687361059711	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687361059721	Marionette	INFO	Listening on port 50587
+Read port: 50587
+1687361059974	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687361124200	Marionette	INFO	Stopped listening on port 50587
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofiledFoVOw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687361123074	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687361123081	Marionette	INFO	Listening on port 50706
+Read port: 50706
+1687361123315	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687361216776	Marionette	INFO	Stopped listening on port 50706
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileyaREjN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687361204704	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687361204714	Marionette	INFO	Listening on port 50826
+Read port: 50826
+1687361204960	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687361242237	Marionette	INFO	Stopped listening on port 50826
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileNwsXjh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687361236274	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687361236283	Marionette	INFO	Listening on port 50934
+Read port: 50934
+1687361236528	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687361262516	Marionette	INFO	Stopped listening on port 50934
+Dynamically enable window occlusion 1
+1687361362003	geckodriver	INFO	Listening on 127.0.0.1:51031
+1687361365055	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileQeMmhX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687361365674	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687361365682	Marionette	INFO	Listening on port 51041
+Read port: 51041
+1687361365917	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687361412209	Marionette	INFO	Stopped listening on port 51041
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile8lj2Sp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687361408307	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687361408318	Marionette	INFO	Listening on port 51159
+Read port: 51159
+1687361408592	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687362016245	Marionette	INFO	Stopped listening on port 51159
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilebH39Cl"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687361967980	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687361967990	Marionette	INFO	Listening on port 51390
+Read port: 51390
+1687361968229	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687362017096	Marionette	INFO	Stopped listening on port 51390
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilevLl0Zy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687362001720	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687362001728	Marionette	INFO	Listening on port 51505
+Read port: 51505
+1687362001974	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687362017638	Marionette	INFO	Stopped listening on port 51505
+Dynamically enable window occlusion 1
+1687362022771	geckodriver	INFO	Listening on 127.0.0.1:51591
+1687362025805	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile9lCNWt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687362026301	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687362026309	Marionette	INFO	Listening on port 51603
+Read port: 51603
+1687362026551	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687362205339	Marionette	INFO	Stopped listening on port 51603
+Dynamically enable window occlusion 1
+1687362716823	geckodriver	INFO	Listening on 127.0.0.1:51786
+1687362719897	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilenhTfhp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687362720410	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687362720419	Marionette	INFO	Listening on port 51796
+Read port: 51796
+1687362720649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687362920639	Marionette	INFO	Stopped listening on port 51796
+Dynamically enable window occlusion 1
+1687362987075	geckodriver	INFO	Listening on 127.0.0.1:51954
+1687362990094	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileBnB1rb"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687362990589	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687362990597	Marionette	INFO	Listening on port 51964
+Read port: 51964
+1687362990839	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687363006481	Marionette	INFO	Stopped listening on port 51964
+Dynamically enable window occlusion 1
+1687363649502	geckodriver	INFO	Listening on 127.0.0.1:52166
+1687363652529	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilejw2UoD"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687363653087	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687363653094	Marionette	INFO	Listening on port 52177
+Read port: 52177
+1687363653342	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687363959894	Marionette	INFO	Stopped listening on port 52177
+Dynamically enable window occlusion 1
+1687363997476	geckodriver	INFO	Listening on 127.0.0.1:52396
+1687364000500	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilevm5TtF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687364001003	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687364001012	Marionette	INFO	Listening on port 52406
+Read port: 52406
+1687364001249	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687364075108	Marionette	INFO	Stopped listening on port 52406
+Dynamically enable window occlusion 1
+1687364204897	geckodriver	INFO	Listening on 127.0.0.1:52570
+1687364207932	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileiwUoSz"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687364208417	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687364208426	Marionette	INFO	Listening on port 52581
+Read port: 52581
+1687364208662	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687364398681	Marionette	INFO	Stopped listening on port 52581
+Dynamically enable window occlusion 1
+1687364990430	geckodriver	INFO	Listening on 127.0.0.1:52840
+1687364993500	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileLvhNLo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687364993985	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687364993994	Marionette	INFO	Listening on port 52852
+Read port: 52852
+1687364994238	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687365037897	Marionette	INFO	Stopped listening on port 52852
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileApxfxm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687365020908	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687365020918	Marionette	INFO	Listening on port 52890
+Read port: 52890
+1687365021153	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687365038905	Marionette	INFO	Stopped listening on port 52890
+Dynamically enable window occlusion 1
+1687365040655	geckodriver	INFO	Listening on 127.0.0.1:52933
+1687365043702	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilejL4OTT"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687365044163	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687365044170	Marionette	INFO	Listening on port 52945
+Read port: 52945
+1687365044414	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687365202518	Marionette	INFO	Stopped listening on port 52941687365202747	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile4FngCr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687365203421	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687365203431	Marionette	INFO	Listening on port 53084
+Read port: 53084
+1687365203664	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687365271575	Marionette	INFO	Stopped listening on port 53084
+Dynamically enable window occlusion 1
+1687365276927	geckodriver	INFO	Listening on 127.0.0.1:53225
+1687365279951	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileIHpcr2"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687365280453	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687365280462	Marionette	INFO	Listening on port 53237
+Read port: 53237
+1687365280710	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687366072018	Marionette	INFO	Stopped listening on port 53237
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile74vRVt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687365341813	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687365341822	Marionette	INFO	Listening on port 53360
+Read port: 53360
+1687365342055	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687366072714	Marionette	INFO	Stopped listening on port 53360
+Dynamically enable window occlusion 1
+1687366357598	geckodriver	INFO	Listening on 127.0.0.1:53657
+1687366360645	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile9wBTdR"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687366361341	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687366361354	Marionette	INFO	Listening on port 53667
+Read port: 53667
+1687366361650	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687366469874	Marionette	INFO	Stopped listening on port 53667
+Dynamically enable window occlusion 1
+1687366596040	geckodriver	INFO	Listening on 127.0.0.1:53824
+1687366599093	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileAyTKyQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687366599590	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687366599600	Marionette	INFO	Listening on port 53834
+Read port: 53834
+1687366599838	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687366623970	Marionette	INFO	Stopped listening on port 53834
+Dynamically enable window occlusion 1
+1687366710729	geckodriver	INFO	Listening on 127.0.0.1:53935
+1687366713767	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileJS20Ko"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687366714249	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687366714257	Marionette	INFO	Listening on port 53947
+Read port: 53947
+1687366714497	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687367230408	Marionette	INFO	Stopped listening on port 53947
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileSLof54"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687367081109	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687367081117	Marionette	INFO	Listening on port 54151
+Read port: 54151
+1687367081370	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687367231574	Marionette	INFO	Stopped listening on port 54151
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileLSIAyO"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687367175122	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687367175131	Marionette	INFO	Listening on port 54287
+Read port: 54287
+1687367175367	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://app.usercentrics.eu/browser-ui/3.22.0/index.module.js, line 1: Error: Error: Error: {"cmpLayer":"FIRST_LAYER","controllerId":"de4ecdd2b67643cb596ee00cc13d58c7350fce8317d4c7eed03979086ceb1735","msg":"EUD ERROR[V2]: error loading dynamically imported module","origin":"https://messari.io","settingsId":"tMrziqZnk","settingsVersion":"4.0.20","stackTrace":"","timestamp":"1687367183737","uiVariant":"GDPR","uiVersion":"3.22.0","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0","userCountry":"IN","userRegion":"KA"}
+1687367232246	Marionette	INFO	Stopped listening on port 54287
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile1QwGsT"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687367230066	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687367230079	Marionette	INFO	Listening on port 54425
+Read port: 54425
+1687367230387	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687367300313	Marionette	INFO	Stopped listening on port 54425
+Dynamically enable window occlusion 1
+1687367340491	geckodriver	INFO	Listening on 127.0.0.1:54567
+1687367343563	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileSkT9oQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687367344064	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687367344072	Marionette	INFO	Listening on port 54578
+Read port: 54578
+1687367344307	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687368794251	Marionette	INFO	Stopped listening on port 54578
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileo4b9hT"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687367423904	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687367423913	Marionette	INFO	Listening on port 54720
+Read port: 54720
+1687367424147	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687367787444	Marionette	INFO	Stopped listening on port 54720
+Dynamically enable window occlusion 1
+le.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687367754304	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687367754315	Marionette	INFO	Listening on port 54917
+Read port: 54917
+1687367754562	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687368795403	Marionette	INFO	Stopped listening on port 54917
+Dynamically enable window occlusion 1
+1687368800627	geckodriver	INFO	Listening on 127.0.0.1:55202
+1687368803661	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofilelqmmtk"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687368803921	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687368803925	Marionette	INFO	Listening on port 55212
+Read port: 55212
+1687368804044	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687368938547	Marionette	INFO	Stopped listening on port 55212
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1687368972784	geckodriver	INFO	Listening on 127.0.0.1:55358
+1687368975804	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofile1FRIKp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687368976070	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687368976075	Marionette	INFO	Listening on port 55370
+Read port: 55370
+1687368976199	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1687369370228	Marionette	INFO	Stopped listening on port 55370
+Dynamically enable window occlusion 1
+le.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687369075249	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687369075253	Marionette	INFO	Listening on port 55503
+Read port: 55503
+1687369075379	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687369367382	Marionette	INFO	Stopped listening on port 55503
+Dynamically enable window occlusion 1
+ng command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileCqJjIw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687369199786	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687369199792	Marionette	INFO	Listening on port 55674
+Read port: 55674
+1687369199938	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://app.usercentrics.eu/browser-ui/3.22.0/index.module.js, line 1: Error: Error: Error: {"cmpLayer":"FIRST_LAYER","controllerId":"9395bc254f492b6f8e1bb16b24be3300569b4d8c0e4915fde9d358e3a9326b19","msg":"EUD ERROR[V2]: error loading dynamically imported module","origin":"https://messari.io","settingsId":"tMrziqZnk","settingsVersion":"4.0.20","stackTrace":"","timestamp":"1687369207683","uiVariant":"GDPR","uiVersion":"3.22.0","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0","userCountry":"IN","userRegion":"KA"}
+1687369311123	Marionette	INFO	Stopped listening on port 55674
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1687369364346	geckodriver	INFO	Listening on 127.0.0.1:55832
+1687369367377	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\hp\\AppData\\Local\\Temp\\rust_mozprofileLPA84m"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687369367714	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1687369367721	Marionette	INFO	Listening on port 55844
+Read port: 55844
+1687369367872	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1687369933469	Marionette	INFO	Stopped listening on port 55844
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
