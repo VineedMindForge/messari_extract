@@ -1,0 +1,15 @@
+Page closed -- AAVE
+*** Not extracted for proposal V2 Ethereum: Incremental Reserve Factor UpdatesAave DAO
+*** Not extracted for proposal V3 Polygon: Chaos Labs Risk Parameter Update (Jun. 20, 2023)Aave DAO
+Use Case Note Defined Chaos Labs V2 to V3 Migration Next Steps (AIP 252)Aave DAO. Stage - On-Chain Vote, Status - Queued
+*** Not extracted for proposal V3 Ethereum: USDT Risk Parameters UpdateAave DAO
+*** Not extracted for proposal V3 Ethereum: Integrating MakerDAO's DSRAave DAO
+Page closed -- GITCOIN
+Error - [Revote] Allo Season 18 Budget RequestGitcoin DAO. Need to check. Stage - On-Chain Vote, Status - Executed
+Error - [Revote] Gitcoin Passport Season 18 Budget RequestGitcoin DAO. Need to check. Stage - On-Chain Vote, Status - Executed
+Error - Evolving the FDDGitcoin DAO. Need to check. Stage - Preliminary Discussion, Status - Preliminary Discussion
+Use Case Note Defined Public Goods Funding Season 15 Budget RequestGitcoin DAO. Stage - On-Chain Vote, Status - Queued
+Use Case Note Defined FDD Season 14 Budget RequestGitcoin DAO. Stage - Community Feedback, Status - Succeeded
+Use Case Note Defined Frax x Zigzag Partnership (FIP 36)Gitcoin DAO. Stage - Off Chain Vote, Status - Failed
+Error - Prime DAO x Gitcoin PartnershipGitcoin DAO. Need to check. Stage - On-Chain Vote, Status - Executed
+Error - DeveloperDAO PartnershipGitcoin DAO. Need to check. Stage - On-Chain Vote, Status - Executed

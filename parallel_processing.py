@@ -88,9 +88,7 @@ def coin_overview_extract(link):
         element_wait.until(EC.presence_of_element_located((By.XPATH,element_xpath)))
         element = coin_driver.find_element("xpath",element_xpath)
         coin_driver.execute_script("arguments[0].click();", element) 
-        print("Clicked on show more")      
     except :
-        print("No Show More Present")
         pass
     
     # Extract the summary section
@@ -162,7 +160,7 @@ def summary_page(page_number):
 
     coins = soup.find('tbody',class_='css-0').find_all('tr', class_='css-6waxvc')
     
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         
         futures = [executor.submit(process_coin, coin) for coin in coins]
         
