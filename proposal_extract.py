@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-import time
+import time, os
 
 import concurrent.futures
 
@@ -64,11 +64,6 @@ def retrieve_link_list(file_path, sheet_name):
     print("All links to the coin's proposal main  page retrieved")
 
     return link_list
-
-file_path = './data_extracts/output_page_consolidated_1to8.xlsx'  # Replace with the actual file path
-sheet_name = 'proposal_extract_list'  # Replace with the actual sheet name
-
-link_list = retrieve_link_list(file_path, sheet_name)
 
 def close_overlay(driver):
     wait = WebDriverWait(driver, 10)
@@ -180,14 +175,17 @@ def set_off_chain_active_vote_extract(row, html, soup):
     row['off_chain_start_date'] = key_info_elements[5].text
     row['off_chain_end_date'] = key_info_elements[6].text
     #Preliminary discussion
-    row['prelim_sentiments'] = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
-    prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
-    # print(prem_other_details)
-    elements = prem_other_details.split(" by ")
-    element1 = elements[0]
-    element2 = elements[1].split(" on ")[0]
-    element3 = elements[1].split(" on ")[1]
-    row['prelim_discussion_start_date'], row['prelim_author'], row['prelim_location'] = [element1, element2, element3]
+    try:
+        row['prelim_sentiments'] = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
+        prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
+        # print(prem_other_details)
+        elements = prem_other_details.split(" by ")
+        element1 = elements[0]
+        element2 = elements[1].split(" on ")[0]
+        element3 = elements[1].split(" on ")[1]
+        row['prelim_discussion_start_date'], row['prelim_author'], row['prelim_location'] = [element1, element2, element3]
+    except:
+        pass
     off_chain_votes = soup.select(".css-1s50f5r")[-1]
     off_chain_option_list = off_chain_votes.text.replace('Active Vote',"").replace("Cast Your Vote","").split("%")[:-1]
     option_dict = {}
@@ -287,21 +285,27 @@ def set_on_chain_active_extract(row, html, soup):
     row['summary'] = summary
     
     # Check if off-chain also present
-    top_boxes = len(soup.find('div', class_="MuiBox-root css-1qoa196").find_all('div', class_=lambda value: value and value.startswith("MuiPaper-root MuiPaper-elevation")))
-    off_chain_present = False if top_boxes == 2 else True
+    try:
+        top_boxes = len(soup.find('div', class_="MuiBox-root css-1qoa196").find_all('div', class_=lambda value: value and value.startswith("MuiPaper-root MuiPaper-elevation")))
+        off_chain_present = False if top_boxes == 2 else True
+    except:
+        off_chain_present = False
     
     row['on_chain_author'] = soup.find_all('div', 'MuiBox-root css-z53l98')[0].text.replace('Author',"")
     row['on_chain_start_date'] = soup.find_all('div', class_="MuiStep-root MuiStep-vertical css-0")[1].text.replace("ACTIVE VOTE","")
     row['on_chain_end_date'] = soup.find('div', class_= "MuiContainer-root MuiContainer-maxWidthMd css-1u2mkel").find('div', class_ = "MuiBox-root css-1isemmb").text
     #Preliminary discussion
-    row['prelim_sentiments'] = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
-    prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
-    # print(prem_other_details)
-    elements = prem_other_details.split(" by ")
-    element1 = elements[0]
-    element2 = elements[1].split(" on ")[0]
-    element3 = elements[1].split(" on ")[1]
-    row['prelim_discussion_start_date'], row['prelim_author'], row['prelim_location'] = [element1, element2, element3]
+    try:
+        row['prelim_sentiments'] = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
+        prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
+        # print(prem_other_details)
+        elements = prem_other_details.split(" by ")
+        element1 = elements[0]
+        element2 = elements[1].split(" on ")[0]
+        element3 = elements[1].split(" on ")[1]
+        row['prelim_discussion_start_date'], row['prelim_author'], row['prelim_location'] = [element1, element2, element3]
+    except:
+        pass
     
     # Adding on-chain votes
     on_chain_votes = soup.select(".css-1s50f5r+ .css-1s50f5r")[0]
@@ -328,21 +332,27 @@ def set_on_chain_remaining_extract(row, html, soup):
     row['summary'] = summary
     
     # Check if off-chain also present
-    top_boxes = len(soup.find('div', class_="MuiBox-root css-1qoa196").find_all('div', class_=lambda value: value and value.startswith("MuiPaper-root MuiPaper-elevation")))
-    off_chain_present = False if top_boxes == 2 else True
-    
+    try:
+        top_boxes = len(soup.find('div', class_="MuiBox-root css-1qoa196").find_all('div', class_=lambda value: value and value.startswith("MuiPaper-root MuiPaper-elevation")))
+        off_chain_present = False if top_boxes == 2 else True
+    except:
+        off_chain_present = False
+        
     row['on_chain_author'] = soup.find_all('div', 'MuiBox-root css-z53l98')[0].text.replace('Author',"")
     row['on_chain_start_date'] = soup.find_all('div', class_="MuiStep-root MuiStep-vertical css-0")[3].text
     row['on_chain_end_date'] = soup.find_all('div', class_="MuiStep-root MuiStep-vertical css-0")[4].text
     #Preliminary discussion
-    row['prelim_sentiments'] = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
-    prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
-    # print(prem_other_details)
-    elements = prem_other_details.split(" by ")
-    element1 = elements[0]
-    element2 = elements[1].split(" on ")[0]
-    element3 = elements[1].split(" on ")[1]
-    row['prelim_discussion_start_date'], row['prelim_author'], row['prelim_location'] = [element1, element2, element3]
+    try:
+        row['prelim_sentiments'] = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
+        prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
+        # print(prem_other_details)
+        elements = prem_other_details.split(" by ")
+        element1 = elements[0]
+        element2 = elements[1].split(" on ")[0]
+        element3 = elements[1].split(" on ")[1]
+        row['prelim_discussion_start_date'], row['prelim_author'], row['prelim_location'] = [element1, element2, element3]
+    except:
+        pass
     
     # Adding on-chain votes
     on_chain_votes = soup.select(".css-178yklu .css-15j76c0:nth-child(1)")[0]
@@ -462,16 +472,12 @@ def function_for_threading(data):
             updated_row = set_off_chain_remaining_extract(row, html, soup)
             for feature, value in updated_row.items():
                 result.loc[index, feature] = value
-        elif stage == 'Off-Chain Vote':
-            print(f"*** Not extracted for proposal {row['Proposal']}")
-        
+       
         elif stage == 'Temperature Check' and status in ['Succeeded','Failed']:
             updated_row = set_temp_check_extract(row, html, soup)
             for feature, value in updated_row.items():
                 result.loc[index, feature] = value
-        elif stage == 'Temperature Check':
-            print(f"*** Not extracted for proposal {row['Proposal']}")
-            
+                    
         elif stage =="On-Chain Vote" and status == "Active Vote":
             updated_row = set_on_chain_active_extract(row, html, soup)
             for feature, value in updated_row.items():
@@ -485,12 +491,12 @@ def function_for_threading(data):
             for feature, value in updated_row.items():
                 result.loc[index, feature] = value
         else:
-            print(f"Use Case Note Defined {row['Proposal']}. Stage - {stage}, Status - {status}")        
+            print(f"Use-Case Not Defined {row['Proposal']}. Stage - {stage}, Status - {status}")        
     
     except:
         print(f"Error - {row['Proposal']}. Need to check. Stage - {stage}, Status - {status}")
                 
-    result.to_excel(f"{name}.xlsx")
+    result.to_excel(f"./proposal_extract/{name}.xlsx")
     
 def update_set_wise_details(result, name):
     # for index, row in result.iterrows():
@@ -499,8 +505,6 @@ def update_set_wise_details(result, name):
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         data = [(result, row, index, name) for index, row in result.iterrows()]
         executor.map(function_for_threading, data)
-        
-
 
 def detailed_proposal_extract(html, soup, name):
     df = pd.read_html(html)[1]
@@ -521,12 +525,22 @@ def detailed_proposal_extract(html, soup, name):
     split_proposal.columns = ['Proposal', 'Creation_date', 'Stage']
     result = pd.concat([split_proposal,table.drop('Proposal', axis=1),links_column], axis=1)
     
-    result.to_excel(f"{name}.xlsx")
-    update_set_wise_details(result.iloc[:100,:], name)
-    # print(result.columns)
-    result.to_excel(f"{name}.xlsx")
+    result.to_excel(f"./proposal_extract/{name}.xlsx")
+    update_set_wise_details(result, name)
+    print(f"Complete extract done for {name} coin. Moving to next coin")
+  
 
-for [name, link] in link_list[0:5]:
+
+folder_path = "./data_extracts/"
+extract_path = "./proposal_extract/"
+file_name = 'output_page_consolidated_1to8.xlsx'  # Replace with the actual file path
+sheet_name = 'proposal_extract_list'  # Replace with the actual sheet name
+link_list = retrieve_link_list(os.path.join(folder_path,file_name), sheet_name) 
+
+os.makedirs(extract_path) if not os.path.exists(extract_path) else None
+  
+    
+for [name, link] in link_list[5:10]:
     html, soup = perform_infinite_scroll_retrieve_code(link)
     detailed_proposal_extract(html, soup, name)
 
