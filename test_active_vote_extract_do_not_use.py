@@ -1,203 +1,118 @@
+import os, time, bs4, re
+import concurrent.futures 
+from pathlib import Path
+import pandas as pd
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-
-import time
-
-import pandas as pd
-
-from bs4 import BeautifulSoup
-
-
-# list_of_urls = [ #on-chain active / (on chain/off chain combineed)
-#     'https://messari.io//governor/proposal/c9eaf0a3-9bbe-4d7f-9dd8-ec782ffdae0b?daoSlug=aave-governance&daoTab=proposals',
-#       'https://messari.io//governor/proposal/c6ad38f1-bd8c-406c-a30f-8f36341066a1?daoSlug=aave-governance&daoTab=proposals'
-
-# ]
-
-# list_of_urls = [ #on-chain Executed (onchain off chain combined)
-#     'https://messari.io//governor/proposal/8d227b4e-1239-4bfd-9e69-eac381357f64?daoSlug=aave-governance&daoTab=proposals',
-# 'https://messari.io//governor/proposal/1062ee0d-dcbc-453f-a8b1-f5b765d34a74?daoSlug=aave-governance&daoTab=proposals',
-# 'https://messari.io//governor/proposal/cd4719d9-39b1-4ee1-b7e6-a7ceb260a581?daoSlug=aave-governance&daoTab=proposals',
-# 'https://messari.io//governor/proposal/7472ef91-b7ca-42e2-81e0-68876e8ac4ab?daoSlug=aave-governance&daoTab=proposals',
-# 'https://messari.io/governor/proposal/778e3931-73c8-43da-a5ad-4cc0571593d0?daoSlug=aave-governance&daoTab=proposals'
-
-# ]
-
-list_of_urls = [ #on-chain failed (onchain off chain combined)
-    'https://messari.io//governor/proposal/75b2e335-129d-4938-885e-dda204bc0a29?daoSlug=aave-governance&daoTab=proposals',
-'https://messari.io//governor/proposal/8b48c9ce-7bd3-4a05-89b1-db4fce2190e2?daoSlug=aave-governance&daoTab=proposals',
-'https://messari.io//governor/proposal/9084cd81-7716-4f8c-9ec3-2f3597433edd?daoSlug=aave-governance&daoTab=proposals',
-'https://messari.io//governor/proposal/ad10ee9e-12c6-4af1-a384-3afad02bab0c?daoSlug=aave-governance&daoTab=proposals',
-'https://messari.io//governor/proposal/90965240-1fef-4c6d-9941-e4653bb47215?daoSlug=aave-governance&daoTab=proposals'
-
-]
-
-# list_of_urls = [ 
-#         'https://messari.io//governor/proposal/d252e1ed-e693-4b00-b97d-0ce8528126cc?daoSlug=aave-governance&daoTab=proposals',
-#         'https://messari.io//governor/proposal/09993c2f-5325-4130-ae70-e1857e992912?daoSlug=aave-governance&daoTab=proposals'         
-# ]
-
-
-
-
-# for index, url in enumerate(list_of_urls, start=1):
-#     driver = webdriver.Firefox()
-#     driver.get(url)
-#     time.sleep(5)
-#     content = driver.page_source
-#     with open(f'html\html{index}.txt', 'w') as file:
-#         file.write(content)
-#     print(f"HTML of {index} saved")
-#     driver.quit()
-
-import os 
-
-file_list = os.listdir('./html')
-
-file_contents = {}
-
-for file_name in file_list:
-    if file_name.endswith('.txt'):
-        file_path = os.path.join("./html", file_name)
+    
+def process_rows(inputs):
+    votes_extract_folder_path, file, index, row = inputs
+    link = row['Links']
+    stage = row['Stage']
+    coin = file
+    
+    if stage =="Preliminary Discussion":
+        return
+    
+    button_text = []
+    
+    # Open webpage using Selenium
+    driver = webdriver.Firefox()  # Assuming you're using Chrome WebDriver
+    driver.get(link)
+    time.sleep(10)
+    
+    wait = WebDriverWait(driver, 10)
+    
         
-    with open(file_path, 'r') as file:
-        content = file.read()
-        file_contents[file_name] = content
+    elements = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR,'.css-topwlp')))
+    soup = bs4.BeautifulSoup(driver.page_source, 'html.parser')
 
-for file, content in file_contents.items():
-    soup = BeautifulSoup(content, 'html.parser')
-    summary= soup.find('div', class_="MuiBox-root css-79elbk").text
-    print(file, "--->")
-    # print(summary)
-    
-    prelim_discussion_present = True
-    try:
-        top_boxes = len(soup.find('div', class_="MuiBox-root css-1qoa196").find_all('div', class_=lambda value: value and value.startswith("MuiPaper-root MuiPaper-elevation")))
-        off_chain_present = False if top_boxes == 2 else True
-    except:
-        off_chain_present = False
-        prelim_discussion_present = False
-    # print(off_chain_present)
-    on_chain_author = soup.find_all('div', 'MuiBox-root css-z53l98')[0].text.replace('Author',"")
-    on_chain_start_date = soup.find_all('div', class_="MuiStep-root MuiStep-vertical css-0")[4].text
-    on_chain_end_date = soup.find_all('div', class_="MuiStep-root MuiStep-vertical css-0")[5].text
-    # print(on_chain_author)
-    # print(on_chain_start_date)
-    # print(on_chain_end_date)
-    
-    on_chain_votes = soup.select(".css-178yklu .css-15j76c0:nth-child(1)")[0]
-    on_chain_option_list = [f"{element}%" for element in on_chain_votes.text.replace('Active Vote',"").replace("Cast Your Vote","")\
-        .replace('Results',"").split("%")][:-1]
-    option_dict = {}
-    for index, option in enumerate(on_chain_option_list, start=1):
-        option_dict[f"on_chain_Option_{index}"] = option
-    
-    # print(option_dict)
-    
-    
-    #off chain elements extract 
-    if off_chain_present:  
-        key_info_elements = soup.find_all('div', 'MuiBox-root css-z53l98')
-        off_chain_author = key_info_elements[3].text.replace('Author',"")
-        off_chain_start_date = key_info_elements[8].text
-        off_chain_end_date = key_info_elements[9].text
-        # print(off_chain_author,off_chain_start_date,off_chain_end_date)
-        # for element in key_info_elements:
-        #     print(element.text, end='*'*5)
-        # print()
-        off_chain_votes = soup.select(".css-h5fkc8+ .css-178yklu .css-15j76c0:nth-child(1)")[0]
-        off_chain_option_list = [f"{element}%" for element in off_chain_votes.text.replace('Active Vote',"").replace("Cast Your Vote","")\
-            .replace('Results',"").split("%")][:-1]
-        option_dict = {}
-        for index, option in enumerate(off_chain_option_list, start=1):
-            option_dict[f"Off_Chain_Option_{index}"] = option
-        # print(option_dict)
+    top_boxes = soup.find('div', class_="MuiBox-root css-1qoa196").find_all('div', class_=lambda x: x and x.startswith('MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root jss'))
+    vote_names = []
+    for box in top_boxes:
+        vote_names.append(box.find("h6").text)
+    # print(vote_names)
+
+    button_text = []
+    votes_data = []
+
+    for _ in range(len(elements)):
         
-    # Preliminary discussion
-    prelim_sentiments = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
-    print(prelim_sentiments)
-    prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
-    # print(prem_other_details)
-    elements = prem_other_details.split(" by ")
-    element1 = elements[0]
-    element2 = elements[1].split(" on ")[0]
-    element3 = elements[1].split(" on ")[1]
-    prelim_bottom_date, prelim_author, prelim_location = [element1, element2, element3]
-    print(prelim_bottom_date, prelim_author, prelim_location)
-
+        driver.get(link)
+        time.sleep(10)
+        buttons = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR,'.css-topwlp')))
+        for button in buttons:  
+            if button.text.startswith("VIEW ALL") and button.text not in button_text:
+                button_text.append(button.text)
+                # print(f"Found button {button.text.strip()}")
+                driver.execute_script("arguments[0].click();", button)
+                count_clicker = 0
+                try:
+                    while count_clicker<10:
+                        
+                        time.sleep(4)
+                        load_more_button_css = ".MuiButton-outlined"
+                        load_more_button = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, load_more_button_css)))
+                        driver.execute_script("arguments[0].click();", load_more_button)
+                        count_clicker+=1
+                        
+                except:
+                    pass
+                
+                finally:
+                    votes_data.append(pd.read_html(driver.page_source)[-1])
         
-#     print()
-#     # off_chain_author = key_info_elements[0].text.replace('Author',"")
-#     # print(off_chain_author)
-#     # row['off_chain_start_date'] = key_info_elements[5].text
-#     # row['off_chain_end_date'] = key_info_elements[6].text
-#     # #Preliminary discussion
-#     # row['prelim_sentiments'] = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
-#     # prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
-#     # # print(prem_other_details)
-#     # elements = prem_other_details.split(" by ")
-#     # element1 = elements[0]
-#     # element2 = elements[1].split(" on ")[0]
-#     # element3 = elements[1].split(" on ")[1]
-#     # row['prelim_discussion_start_date'], row['prelim_author'], row['prelim_location'] = [element1, element2, element3]
-#     # off_chain_votes = soup.select(".css-178yklu .css-15j76c0:nth-child(1) .jss25")[0]
-#     # off_chain_option_list = [f"{element}%" for element in off_chain_votes.text.replace('Active Vote',"").replace("Cast Your Vote","").split("%")][:-1]
-#     # option_dict = {}
-    
-# #     on_chain_author = key_info_elements[0].text.replace('Author',"")
+        driver.quit()
+            
+        # try:
+        cleaned_coin = coin.replace(".xlsx","")
+        cleaned_proposal = re.sub(r'\W+', '',row['Proposal'])
+        for i in range(1,len(vote_names)):
+            file_name = f"{cleaned_coin}_{index}_{cleaned_proposal}_{vote_names[i]}.xlsx"
+            full_path = votes_extract_folder_path / file_name
+            votes_data[-i].to_excel(full_path,index=False)
+                
 
-# #     # print(summary)
-# #     # on chain active
-# #     # on-chain details
-# #     on_chain_info_elements = soup.select(".css-1s50f5r+ .css-1s50f5r")[0]
-# #     # print(on_chain_info_elements.text)
-# #     on_chain_option_list = [f"{element}%" for element in on_chain_info_elements.text.replace('Active Vote',"").replace("Cast Your Vote","")\
-# #         .replace('Results',"").split("%")][:-1]
-# #     option_dict = {}
-# #     for index, option in enumerate(on_chain_option_list, start=1):
-# #         option_dict[f"on_chain_Option_{index}"] = option
-# #     print(option_dict)
-# #     print(on_chain_option_list)
+# Function to iterate through DataFrame rows and process links concurrently 
+def process_rows_concurrently(df, max_workers,file,votes_extract_folder_path):
+    # Create a ThreadPoolExecutor with the specified max_workers
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit tasks for each row in the DataFrame
+        futures = [executor.submit(process_rows,[votes_extract_folder_path, file, index, row]) for index, row in df.iterrows()]
+        # Wait for all tasks to complete
+        concurrent.futures.wait(futures)
+ 
     
-# #     key_info_elements = soup.find_all('div', 'MuiBox-root css-z53l98')
-# #     on_chain_author = key_info_elements[0].text.replace('Author',"")
-# #     on_chain_end_date = soup.find('div', class_= "MuiContainer-root MuiContainer-maxWidthMd css-1u2mkel").find('div', class_ = "MuiBox-root css-1isemmb").text
-# #     on_chain_start_date = soup.find_all('div', class_="MuiStep-root MuiStep-vertical css-0")[1].text.replace("ACTIVE VOTE","")
-# #     print(on_chain_start_date)
-# #     # row['temp_check_start_date'] = key_info_elements[5].text
-# #     # row['temp_check_end_date'] = key_info_elements[6].text
+# Set the folder path to scan
+proposal_folder_path = './proposal_extract'
+
+# Set the folder path for votes extract
+
+votes_extract_folder_path = Path(proposal_folder_path + '/votes_extract')
+votes_extract_folder_path.mkdir(parents=True, exist_ok=True)
+
+# Get a list of all XLSX files in the folder
+coin_files = [f for f in os.listdir(proposal_folder_path) if f.endswith('.xlsx')]
+
+# Iterate through each XLSX file
+for file in coin_files:
+    file_path = os.path.join(proposal_folder_path, file)
     
-# # #     temp_check_author = key_info_elements[0].text.replace('Author',"")
-# # #     off_chain_start_date = key_info_elements[5].text
-# # #     off_chain_end_date = key_info_elements[6].text
-# # #     # print(off_chain_author,off_chain_start_date,off_chain_end_date)
-    
-# #     #Preliminary discussion
-# #     prelim_sentiments = soup.find('div',id= "preliminary-discussion").find('div', class_="MuiBox-root css-70qvj9").text
-# #     print(prelim_sentiments)
-# #     prem_other_details = soup.find('div',id= "preliminary-discussion").find('div').find('div').text
-# #     # print(prem_other_details)
-# #     elements = prem_other_details.split(" by ")
-# #     element1 = elements[0]
-# #     element2 = elements[1].split(" on ")[0]
-# #     element3 = elements[1].split(" on ")[1]
-# #     prelim_bottom_date, prelim_author, prelim_location = [element1, element2, element3]
-# #     print(prelim_bottom_date, prelim_author, prelim_location)
-    
-# #     temp_check_votes = soup.select(".css-178yklu .css-15j76c0:nth-child(1)")[0]
-# #     temp_check_option_list = [f"{element}%" for element in temp_check_votes.text.replace('Active Vote',"").replace("Cast Your Vote","")\
-# #         .replace('Results',"").split("%")][:-1]
-# #     option_dict = {}
-# #     for index, option in enumerate(temp_check_option_list, start=1):
-# #         option_dict[f"temp_check_Option_{index}"] = option
-# #     print(option_dict)
-# #     print(temp_check_option_list)
+    # Convert Excel file to DataFrame
+    df = pd.read_excel(file_path)
     
     
+    max_workers = 10
+    process_rows_concurrently(df, max_workers,file,votes_extract_folder_path)
     
-#     # print(option_dict)
-#     # # print(summary)
+    
+    # Iterate through each row
+    for index, row in df.iterrows():
+        if index>10:
+            break
+        process_rows([votes_extract_folder_path,file,index,row])
+    
+    print("@*"*20, file," completed")
