@@ -1,4 +1,4 @@
-import os, time, bs4
+import os, time, bs4, re
 import concurrent.futures 
 from pathlib import Path
 import pandas as pd
@@ -66,15 +66,18 @@ def process_rows(inputs):
                     votes_data.append(pd.read_html(driver.page_source)[-1])
     
     
-    driver.quit()        
-    try:        
+      
+    try: 
+        cleaned_coin = coin.replace(".xlsx","")
+        cleaned_proposal = re.sub(r'\W+', '',row['Proposal'])       
         
         for i in range(1,len(vote_names)):
-            file_name = f"{coin}_{index}_{row['Proposal']}_{vote_names[i]}.xlsx"
+            file_name = f"{cleaned_coin}_{index}_{cleaned_proposal}_{vote_names[i]}.xlsx"
             full_path = votes_extract_folder_path / file_name
             votes_data[-i].to_excel(full_path,index=False)
     except:
         print(f"{coin}_{index}_{row['Proposal']} Some Error", "*"*20)
+    driver.quit()
 
 # Function to iterate through DataFrame rows and process links concurrently 
 def process_rows_concurrently(df, max_workers,file,votes_extract_folder_path):
@@ -85,8 +88,6 @@ def process_rows_concurrently(df, max_workers,file,votes_extract_folder_path):
         # Wait for all tasks to complete
         concurrent.futures.wait(futures)
 
-       
-    
     
     
 # Set the folder path to scan
@@ -107,12 +108,13 @@ for file in coin_files:
     df = pd.read_excel(file_path)
     
     
-    max_workers = 5
-    process_rows_concurrently(df, max_workers,file,votes_extract_folder_path)
+    # max_workers = 10
+    # process_rows_concurrently(df, max_workers,file,votes_extract_folder_path)
     
-    
+    row_no = 0
     # Iterate through each row
     for index, row in df.iterrows():
-        process_rows([votes_extract_folder_path,file,index,row])
-    
+        # process_rows([votes_extract_folder_path,file,index,row])
+        row_no+=1
     print("@*"*20, file," completed")
+    print (row_no)

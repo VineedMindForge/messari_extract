@@ -34,20 +34,23 @@ def process_rows(inputs):
     vote_names = []
     for box in top_boxes:
         vote_names.append(box.find("h6").text)
-    # print(vote_names)
+    # driver.quit()
+    if len(vote_names)<=2:
+        driver.quit()
+        return
 
     button_text = []
     votes_data = []
-
+# 
     for _ in range(len(elements)):
         
         driver.get(link)
-        time.sleep(10)
+        time.sleep(30)
         buttons = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR,'.css-topwlp')))
         for button in buttons:  
             if button.text.startswith("VIEW ALL") and button.text not in button_text:
                 button_text.append(button.text)
-                # print(f"Found button {button.text.strip()}")
+                print(f"Found button {button.text.strip()} for {row['Proposal']}")
                 driver.execute_script("arguments[0].click();", button)
                 count_clicker = 0
                 try:
@@ -64,8 +67,9 @@ def process_rows(inputs):
                 
                 finally:
                     votes_data.append(pd.read_html(driver.page_source)[-1])
-        
         driver.quit()
+        
+        # driver.quit()
             
         # try:
         cleaned_coin = coin.replace(".xlsx","")
@@ -105,14 +109,6 @@ for file in coin_files:
     df = pd.read_excel(file_path)
     
     
-    max_workers = 10
+    max_workers = 3
     process_rows_concurrently(df, max_workers,file,votes_extract_folder_path)
     
-    
-    # Iterate through each row
-    for index, row in df.iterrows():
-        if index>10:
-            break
-        process_rows([votes_extract_folder_path,file,index,row])
-    
-    print("@*"*20, file," completed")
