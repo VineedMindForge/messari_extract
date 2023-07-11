@@ -108,13 +108,9 @@ for file in coin_files:
     df = pd.read_excel(file_path)
     
     
-    # max_workers = 10
-    # process_rows_concurrently(df, max_workers,file,votes_extract_folder_path)
+    max_workers = 10
+    process_rows_concurrently(df, max_workers,file,votes_extract_folder_path)
     
-    row_no = 0
-    # Iterate through each row
-    for index, row in df.iterrows():
-        # process_rows([votes_extract_folder_path,file,index,row])
-        row_no+=1
+
     print("@*"*20, file," completed")
-    print (row_no)
+   
