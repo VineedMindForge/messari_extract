@@ -540,9 +540,13 @@ link_list = retrieve_link_list(os.path.join(folder_path,file_name), sheet_name)
 os.makedirs(extract_path) if not os.path.exists(extract_path) else None
   
     
-for [name, link] in link_list[5:10]:
-    html, soup = perform_infinite_scroll_retrieve_code(link)
-    detailed_proposal_extract(html, soup, name)
+for [name, link] in link_list[15:]:
+    
+    try:
+        html, soup = perform_infinite_scroll_retrieve_code(link)
+        detailed_proposal_extract(html, soup, name)
+    except:
+        print(f"Error - Check {name}")
 
 
 
