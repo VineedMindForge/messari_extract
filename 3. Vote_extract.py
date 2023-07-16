@@ -29,12 +29,16 @@ def process_rows(inputs):
         
     elements = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR,'.css-topwlp')))
     soup = bs4.BeautifulSoup(driver.page_source, 'html.parser')
-
-    top_boxes = soup.find('div', class_="MuiBox-root css-1qoa196").find_all('div', class_=lambda x: x and x.startswith('MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root jss'))
     vote_names = []
-    for box in top_boxes:
-        vote_names.append(box.find("h6").text)
-    print(vote_names)
+
+    try:
+        top_boxes = soup.find('div', class_="MuiBox-root css-1qoa196").find_all('div', class_=lambda x: x and x.startswith('MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root jss'))
+        for box in top_boxes:
+            vote_names.append(box.find("h6").text)
+    
+    except:
+        vote_names = ['dummy', row['Stage']]
+    # print(vote_names)
 
     button_text = []
     votes_data = []
@@ -108,9 +112,10 @@ for file in coin_files:
     df = pd.read_excel(file_path)
     
     
-    max_workers = 10
+    max_workers = 5
     process_rows_concurrently(df, max_workers,file,votes_extract_folder_path)
     
 
     print("@*"*20, file," completed")
+    # input("Continue?")
    
